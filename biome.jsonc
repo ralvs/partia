@@ -1,0 +1,51 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "formatWithErrors": true,
+    "lineWidth": 110,
+    "attributePosition": "auto"
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "asNeeded",
+      "quoteStyle": "single"
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "performance": {
+        "noAccumulatingSpread": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": {
+          "level": "warn"
+          // "fix": "safe" // this will append a underscore but I want to remove the variable
+        },
+        "noUnusedImports": "warn"
+      },
+      "style": {
+        "useImportType": "warn",
+        "useExportType": "warn",
+        "noUnusedTemplateLiteral": {
+          "level": "warn",
+          "fix": "safe"
+        }
+      }
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  }
+}
